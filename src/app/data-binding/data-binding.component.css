@@ -1,7 +1,10 @@
-/*
-.highlight {
+
+.isMouseOn {
     background-color: yellow;
     font-weight: bold;
 }
 
-*/
+.isMouseOff {
+    background-color: red;
+    font-weight: bold;
+}

@@ -3,16 +3,22 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
-  styles: [
+  styleUrls: ['./data-binding.component.css']
+  /*styles: [
     `   
-       . highight {
-         backgroud-color: yellow;
-         font-weight: bold;
-       }
+    .isMouseOn {
+      background-color: yellow;
+      font-weight: bold;
+    }
+  
+    .isMouseOff {
+      background-color: red;
+      font-weight: bold;
+    }
     
     `
-  ]
-})
+  ] */
+}) 
 export class DataBindingComponent implements OnInit {
 
   url: string = 'http://google.com';
@@ -24,6 +30,10 @@ export class DataBindingComponent implements OnInit {
 
   isMouseOver: boolean = false;
 
+  nomeDoCurso: string = 'Angular';
+
+  valorInicial: number = 15;  
+
    getValor() {
      return 1;
    }
@@ -31,11 +41,6 @@ export class DataBindingComponent implements OnInit {
    getCurtirCurso() {
      return true;
    }
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
   botaoClicado() {
     alert('botao clicado!');
@@ -50,8 +55,14 @@ export class DataBindingComponent implements OnInit {
      this.valorSalvo = valor;
   }
 
-  onMouseOverOut() {
-     this.isMouseOver = !this.isMouseOver;
+  onMudouValor(evento){
+     console.log(evento.novoValor);
   }
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
 
 }
